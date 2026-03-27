@@ -1,0 +1,53 @@
+{
+  "name": "promech",
+  "version": "0.1.0",
+  "description": "ProMech - ローカル完結型の自動車補修・販売業向けデスクトップアプリ",
+  "main": "dist/main/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc && npm run copy:renderer",
+    "copy:renderer": "mkdir -p dist/renderer && cp -R src/renderer/* dist/renderer/",
+    "start": "npm run build && electron .",
+    "dev": "tsc -w",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.6.0",
+    "electron": "^36.0.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.10",
+    "@types/node": "^22.14.1",
+    "typescript": "^5.8.3",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "jp.promech.desktop",
+    "productName": "ProMech",
+    "asar": true,
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": true,
+      "allowToChangeInstallationDirectory": false
+    }
+  }
+}

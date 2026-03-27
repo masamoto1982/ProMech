@@ -1,0 +1,38 @@
+body {
+  font-family: "Yu Gothic UI", sans-serif;
+  margin: 0;
+  padding: 24px;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.flex-combo,
+#documentTitle {
+  height: 40px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 15px;
+}
+
+.title-flex {
+  margin-top: 24px;
+  display: grid;
+  gap: 8px;
+}
