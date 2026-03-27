@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc && npm run copy:renderer",
-    "copy:renderer": "mkdir -p dist/renderer && cp -R src/renderer/* dist/renderer/",
+    "copy:renderer": "node scripts/copy-renderer.mjs",
     "start": "npm run build && electron .",
     "dev": "tsc -w",
     "typecheck": "tsc --noEmit",

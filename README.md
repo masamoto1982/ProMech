@@ -47,3 +47,10 @@ npm run dist:win
 - ワークフロー: `.github/workflows/windows-release-on-push.yml`
 - 添付対象: `dist/*.exe`（NSISインストーラー / Portable）
 - Release は push ごとに上書き更新されます（最新成果物を常に取得可能）
+
+## トラブルシュート
+
+- **Windows CI で `cp` / `mkdir -p` エラーになる場合**
+  - `copy:renderer` は Node.js スクリプト (`scripts/copy-renderer.mjs`) に置き換え済みです。
+- **`npm ci` が lockfile 不在で失敗する場合**
+  - CI は `npm install` を利用するよう設定しています。
