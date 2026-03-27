@@ -9,7 +9,9 @@
     "copy:renderer": "mkdir -p dist/renderer && cp -R src/renderer/* dist/renderer/",
     "start": "npm run build && electron .",
     "dev": "tsc -w",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "dist:win": "npm run build && electron-builder --win nsis portable",
+    "dist:portable": "npm run build && electron-builder --win portable"
   },
   "dependencies": {
     "better-sqlite3": "^9.6.0",
