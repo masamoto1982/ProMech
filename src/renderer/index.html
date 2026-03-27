@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProMech</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>処方箋明細入力</h1>
+      <section class="grid">
+        <div id="scope-combo" class="field"></div>
+        <div id="task-combo" class="field"></div>
+        <div id="remarks-combo" class="field"></div>
+        <div id="unit-combo" class="field"></div>
+      </section>
+      <section class="title-flex">
+        <label for="documentTitle">帳票タイトル（任意変更）</label>
+        <input id="documentTitle" value="請求書" />
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
